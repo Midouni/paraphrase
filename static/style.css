@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: rgba(231, 239, 245, 0.582);
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 80vh;
+    transform:translate(-50% ,-50%);
+    box-shadow: 1px 1px 10px 2px gray ;
+}
+.topBar{
+    box-sizing: border-box;
+    width: 100%;
+    height: 10vh;
+    padding-left: 40px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-bottom: solid .5px gray;
+}
+.topBar .model,.GPT2-model,.T5-model{
+    height: 10vh;
+    line-height: 10vh;
+    font-size: 25px;
+}
+.GPT2-model,.T5-model{
+    cursor: pointer;
+    margin-left: 30px;
+}
+.GPT2-model{
+    color: brown;
+    border-bottom: solid brown 2px;
+}
+
+
+.div-inputText{
+    width: 50%;
+    float: left;
+    height: 70vh;
+    border-right: solid 1px gray;
+    box-sizing: border-box;
+    background-color: white;
+    position: relative;
+}
+.input-inputText{
+    padding: 20px;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    resize: none;
+    outline: none;
+    line-height: 1.6;
+}
+.btn-rephrase{
+    position: absolute;
+    height: 50px;
+    width: 120px;
+    background-color: rgb(226, 178, 114);
+    border-radius: 30px;
+    cursor: pointer;
+    text-align: center;
+    top: 100%;
+    left: 100%;
+    transform: translate(-150%,-200%);
+    box-shadow:1px 1px 10px 2px gray ;
+    color: #fff;
+    font-weight: bold;
+    
+    
+}
+
+
+.div-textPraphrasing{
+ width: 50%;
+ float: left;
+ height: 70vh;
+ border-left: solid 1px gray;
+ box-sizing: border-box;
+ background-color: white;
+ line-height: 1.6;
+ padding: 20px;
+}
+
