@@ -32,13 +32,14 @@ rephrase.onclick=function(){
     if (phrase.value.length<1){
         alert("write samething before click in btn");
     }else{
-        data=JSON.stringify(data);
+        var data=JSON.stringify(data);
         xhr.open("GET","/paraphrase?model="+mode+"&text="+phrase.value);
         xhr.send();
 
         xhr.onreadystatechange=function(){
             if(this.readyState==4 && this.status==200){  
                 let res=JSON.parse(this.responseText)
+                console.log(res["text"])
                 textPraphrasing.innerHTML=res["text"]
             }
         }

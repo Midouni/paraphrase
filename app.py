@@ -1,7 +1,6 @@
 from flask import Flask, render_template, make_response
 from flask_restful import Api, Resource, reqparse 
-from models.model import gpt2_paraphraser#,t5_paraphraser
-
+from models.model import gpt2_paraphraser, t5_paraphraser
 
 app=Flask(__name__)
 api=Api(app)
@@ -14,10 +13,9 @@ class paraphraser(Resource):
     def get(self):
         args=data.parse_args()
         if args["model"]=="GPT2":
-            return  {"text":gpt2_paraphraser(args["text"])}
+            return {"text":gpt2_paraphraser(args["text"])}
         else:
-            pass
-            #return {"text":t5_paraphraser(args["text"])}
+            return {"text":t5_paraphraser(args["text"])}
 
 class homePage(Resource):
     def get(self):
@@ -30,4 +28,4 @@ api.add_resource(homePage,"/")
 
 #run the server
 if __name__== "__main__":
-    app.run(debug=True)
+    app.run(debug=True,host='0.0.0.0')
